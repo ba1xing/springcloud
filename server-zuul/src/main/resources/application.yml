@@ -1,0 +1,22 @@
+
+server:
+  port: 8833
+
+spring:
+  application:
+    name: server-gateway
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:123@localhost:8800/eureka/
+
+zuul:
+  routes:
+    user-service:
+      path: /user-service/**
+      serviceId: user-service
+    order-service:
+      path: /order-service/**
+      serviceId: order-service
+

@@ -1,0 +1,29 @@
+
+server:
+  port: 8800
+
+spring:
+  application:
+    name: eureka
+  security:
+    basic:
+      enabled: true
+    user:
+      name: admin
+      password: 123
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defalutZone: http://${spring.security.user.name}:${spring.security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000
+
+
+
+

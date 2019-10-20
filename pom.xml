@@ -23,6 +23,7 @@
         <module>eureka</module>
         <module>server-model</module>
         <module>server-zuul</module>
+        <module>server-config</module>
         <module>user-service</module>
         <module>order-service</module>
     </modules>
